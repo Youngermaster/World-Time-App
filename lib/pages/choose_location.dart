@@ -47,7 +47,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
             padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 1.0),
             child: Card(
               child: ListTile(
-                onTap: () {updateTime(index)},
+                onTap: () {updateTime(index);},
                 title: Text(locations[index].location),
                 leading: CircleAvatar(
                   backgroundImage:

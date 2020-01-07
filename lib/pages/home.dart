@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
                         'location': result['location'],
                         'time': result['time'],
                         'isDayTime': result['isDayTime']
-                      }
+                      };
                     });
                   },
                   label: Text(

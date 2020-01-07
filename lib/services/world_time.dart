@@ -12,7 +12,7 @@ class WorldTime {
     try {
       Response response =
           await get('https://worldtimeapi.org/api/timezone/$url');
-      Map data = jsonDecode(response);
+      Map data = jsonDecode(response.body);
       String dateTime = data['datetime'];
       String offset = data['utc_offset'].substring(1, 3);
       DateTime now = _convertTime(dateTime, offset);
@@ -20,7 +20,7 @@ class WorldTime {
       isDayTime = now.hour > 6 && now.hour < 19 ? true : false;
       time = DateFormat.jm().format(now);
     } catch (e) {
-      print('[ERROR] -> $e')
+      print('[ERROR] -> $e');
       time = 'could not get that data';
     }
   }
