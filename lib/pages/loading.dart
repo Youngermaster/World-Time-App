@@ -28,7 +28,7 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: SpinkKi(
+      child: SpinKitFadingCircle(
         color: Colors.white,
         size: 80.0,
       ),
